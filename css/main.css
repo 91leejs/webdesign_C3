@@ -1,0 +1,303 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{text-decoration: none; color: inherit;}
+ol,ul,li{list-style: none;}
+body{
+    background-color: #fff; 
+    color: #333;
+    font-size: 14px;
+    font-family: "돋움";
+}
+
+.wrap{
+    width: 1000px;
+    height: 650px;
+    display: flex;
+    position: relative;
+
+}
+
+/* left -----------------------------------------------*/
+.left{
+    width: 200px;
+    height: 650px;
+    /* background-color: antiquewhite; */
+}
+
+.logo{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    /* background-color: antiquewhite; */
+}
+
+.nav{
+    margin-top: 30px;
+    width: 200px;
+}
+
+.main{
+    text-align: center;
+}
+
+.main > li{
+    display: inline-block;
+    position: relative;
+}
+
+.main > li > a{
+    display: block;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+
+.main > li:hover > a{
+    background-color: green;
+    color: white;
+}
+
+.sub{
+    position: absolute;
+    left: 180px;
+    top: -40px;
+    width: 180px;
+    height: 200px;
+    display: none;
+    z-index: 50;
+
+}
+
+.sub li{
+
+}
+
+.sub li a{
+    display: block;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: lightgreen;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.sub li:hover a{
+    background-color: green;
+    color: white;
+}
+
+
+/* right -----------------------------------------------*/
+.right{
+    width: 800px;
+    height: 650px;
+    /* background-color: burlywood; */
+}
+
+.img_slide{
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.left_move{
+    display: flex;
+    width: calc(800px * 3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+
+.contents{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contents > div{
+    width: 33%;
+    height: 200px;
+}
+
+.contents h2{
+    font-size: 14px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: lightgreen;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.contents ul{
+    background-color: lightgreen;
+    width: 100%;
+    height: 170px;
+    border-top: 5px solid green ;
+    padding: 5px;
+}
+
+.notice{}
+
+.notice ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.notice ul li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.notice ul li a{
+    width: 70%;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.notice ul li a:hover{
+    text-decoration: underline;
+}
+
+.notice ul li span{
+    width: 25%;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.gallery{}
+
+.gallery ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery ul li{
+    width: 32%;
+}
+
+.gallery ul li a{
+    width: 100%;
+}
+
+.gallery ul li a img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.gallery ul li a img:hover{
+    opacity: 0.5;
+}
+
+.banner{
+    height: 200px;
+    border: 5px solid green;
+    padding: 5px;
+    background-color: lightgreen;
+}
+
+.banner p{
+    height: 100%;
+}
+
+.banner p a{
+    display: block;
+    text-align: center;
+    height: 100%;
+}
+
+.banner p a img{
+    height: 100%;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+}
+
+.banner p a img:hover{
+    filter: none;
+
+}
+
+.footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.f_logo{
+    width: 200px;
+}
+
+.f_right{
+    height: 100%;
+    width: 600px;
+}
+
+.f_menu{
+    height: 50%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.f_menu a{
+    padding: 0 5px;
+}
+
+.f_menu a:hover{
+    text-decoration: underline;
+}
+
+.copy{
+    height: 50%;
+    text-align: center;
+    line-height: 50px;
+    border-top: 1px dotted black;
+}
+
+.pop{
+    width: 500px;
+    height: 300px;
+    background-color: #eee;
+    border: 5px groove gray;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+.pop h3{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 5px double #bbb;
+}
+
+.pop p{
+    padding-top: 20px;
+    text-align: justify;
+    line-height: 2;
+}
+
+.pop .close{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 70;
+
+}
